@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /Tugas2-PWEBPR-A-1002/
+RewriteRule ^index\\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Tugas2-PWEBPR-A-1002/index.php [L]
