@@ -1,13 +1,5 @@
 <?php
 
-// // Auth
-// route('login', 'get', 'AuthController::login');
-// route('login', 'post', 'AuthController::sessionLogin');
-// route('register', 'get', 'AuthController::register');
-// route('register', 'post', 'AuthController::newRegister');
-// route('logout', 'get', 'AuthController::logout');
-
-
 // CONTACT
 route('dashboard', 'get', 'ContactController::index');
 route('dashboard/add-contact', 'post', 'ContactController::createContact');
