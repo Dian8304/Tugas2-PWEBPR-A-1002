@@ -56,7 +56,7 @@
                     </div>
                     </div>
                     <div class="col-12">
-                    <p class="m-0 text-secondary text-center">Don't have an account? <a href="signin.php" class="link-primary text-decoration-none">Sign up</a></p>
+                    <p class="m-0 text-secondary text-center">Don't have an account? <a href="signin" class="link-primary text-decoration-none">Sign up</a></p>
                     </div>
                 </div>
                 </form>

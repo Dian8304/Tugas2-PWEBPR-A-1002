@@ -1,34 +1,30 @@
 <?php
-include_once 'config/static.php';
-// include_once 'controller/main.php';
-// include_once 'function/main.php';
-// include_once 'config/env.php';
-// include_once 'controller/routes.php';
+// var_dump($_SERVER);
 
-// $url = basename($_SERVER['REQUEST_URI']);
-// // echo "URL: $url"; // Debugging
+$url = $_SERVER['REQUEST_URI'];
 
-// $url = implode(
-//     "/",
-//     array_filter(
-//         explode(
-//             "/",
-//             str_replace(
-//                 $_ENV['BASEDIR'],
-//                 "",
-//                 parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
-//             )
-//         ),
-//         'strlen'
-//     )
-// );
+$dirName = 'Tugas2-PWEBPR-A-1002';
+$url = implode("/",
+            array_filter(
+                explode("/",
+                    str_replace($dirName, "",
+                        parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+                    )
+                ), 'strlen'
+            )
+        );
 
-// if (!in_array($url, $urls['routes'])) {
-//     header('Location: ' . BASEURL);
-//     exit;
-// }
-
-// $call = $urls[$_SERVER['REQUEST_METHOD']][$url];
-// $call();
-
-echo 'hello';
+switch ($url) {
+    case 'login':
+        include 'view/login.php';
+        break;
+    case 'signin':
+        include 'view/signin.php';
+        break;
+    case 'insert';
+        include 'view/insert.php';
+        break;
+    default:
+        include 'view/dashboard.php';
+}
+// var_dump($url);

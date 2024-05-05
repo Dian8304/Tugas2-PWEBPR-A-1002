@@ -1,25 +1,25 @@
 <?php
-require_once 'akun.php';
-if(isset($_POST['submit'])) {
-    $no_id = $_POST['no_id'];
-    $owner = $_POST['owner'];
-    $no_hp = $_POST['no_hp'];
-    $email = $_POST['email'];
-    Contact::insert($no_id, $owner, $no_hp, $email);
+// require_once 'akun.php';
+// if(isset($_POST['submit'])) {
+//     $no_id = $_POST['no_id'];
+//     $owner = $_POST['owner'];
+//     $no_hp = $_POST['no_hp'];
+//     $email = $_POST['email'];
+//     Contact::insert($no_id, $owner, $no_hp, $email);
 
-    $result = $stmt->affected_rows > 0 ? true : false;
-    if($result == true) {
-        echo "<script>
-            alert('Data gagal ditambahkan!');
-            document.location.href = 'dashboard.php';
-        </script>";
-    } else {
-        echo "<script>
-            alert('Data berhasil ditambahkan!');
-            document.location.href = 'dashboard.php';
-        </script>";
-    }
-}
+//     $result = $stmt->affected_rows > 0 ? true : false;
+//     if($result == true) {
+//         echo "<script>
+//             alert('Data gagal ditambahkan!');
+//             document.location.href = 'dashboard.php';
+//         </script>";
+//     } else {
+//         echo "<script>
+//             alert('Data berhasil ditambahkan!');
+//             document.location.href = 'dashboard.php';
+//         </script>";
+//     }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if(isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact App Manager</title>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/resource/style.css">
+    <link rel="stylesheet" href="/Tugas2-PWEBPR-A-1002/resource/style.css">
 </head>
 <body>
 <section class="bg-light py-3 py-md-5">
