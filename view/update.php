@@ -11,9 +11,9 @@
             <div class="card border border-light-subtle rounded-3 shadow-sm">
             <div class="card-body p-3 p-md-4 p-xl-5">
                 <div class="text-center mb-3">
-                <h1>Tambah Data Kontak</h1>
+                <h1>Ubah Data Kontak</h1>
                 </div>
-                <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Silakan tambah data kontak</h2>
+                <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Silakan ubah data kontak</h2>
                 <form action="" method="post">
                 <div class="row gy-2 overflow-hidden">
                     <div class="col-12">
@@ -44,7 +44,7 @@
                 <div class="col-12">
                     <div class="d-grid my-3">
                         <a href="dashboard.php">
-                            <button class="btn btn-primary btn-lg" type="submit" name="submit">Tambah Data</button>
+                            <button class="btn btn-primary btn-lg" type="submit" name="submit">Ubah Data</button>
                         </a>
                     </div>
                 </div>

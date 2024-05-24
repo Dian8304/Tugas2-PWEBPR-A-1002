@@ -27,7 +27,7 @@ class AuthController {
             header('Location: '.BASEURL.'dashboard');
         }
     }
-    static function newRegister() {
+    static function newSignin() {
         $post = array_map('htmlspecialchars', $_POST);
 
         $user = User::register([
