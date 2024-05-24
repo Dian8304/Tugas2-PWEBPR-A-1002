@@ -1,23 +1,22 @@
 <?php
+
 include_once 'models/user.php';
 include_once 'function/main.php';
 include_once 'config/static.php';
 
 class AuthController {
     static function login() {
-        view('auth/auth_layout', ['url' => 'login']);
+        view('login');
     }
-
-    static function register() {
-        view('auth/auth_layout', ['url' => 'register']);
+    static function signin() {
+        view('signin');
     }
-
     static function sessionLogin() {
         $post = array_map('htmlspecialchars', $_POST);
 
         $user = User::login([
-            'username' => $post['username'], 
-            'password' => $post['password']
+            'nama_user' => $post['nama_user'], 
+            'pass' => $post['pass']
         ]);
         if ($user) {
             unset($user['password']);
@@ -25,20 +24,15 @@ class AuthController {
             header('Location: '.BASEURL.'dashboard');
         }
         else {
-            header('Location: '.BASEURL.'login?failed=true');
+            header('Location: '.BASEURL.'dashboard');
         }
     }
-
     static function newRegister() {
         $post = array_map('htmlspecialchars', $_POST);
 
         $user = User::register([
-            'name' => $post['name'], 
-            'username' => $post['username'], 
-            'password' => $post['password'],
-            'full_name' => $post['full_name'],
-            'phone' => $post['phone'],
-            'email' => $post['email']
+            'nama_user' => $post['nama_user'], 
+            'pass' => $post['pass']
         ]);
 
         if ($user) {
@@ -47,20 +41,5 @@ class AuthController {
         else {
             header('Location: '.BASEURL.'register?failed=true');
         }
-    }
-
-    static function logout() {
-        $_SESSION = array();
-
-        if (ini_get("session.use_cookies")) {
-            $params = session_get_cookie_params();
-            setcookie(session_name(), '', time() - 42000,
-                $params["path"], $params["domain"],
-                $params["secure"], $params["httponly"]
-            );
-        }
-
-        session_destroy();
-        header('Location: '.BASEURL. 'login');
     }
 }

@@ -2,7 +2,6 @@
 
 <?php ob_start();?>
 
-<?php $title = 'Contact App Manager' ?>
 <?php $body = ob_get_clean(); ?>
 
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:150px">

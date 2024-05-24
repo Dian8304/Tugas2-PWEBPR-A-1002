@@ -1,18 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact App Manager</title>
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/resource/style.css">
-</head>
+<?php include 'view/master.php'; ?>
+
+<?php ob_start();?>
+
+<?php $body = ob_get_clean(); ?>
+
 <style>
     .btn{
         width: 100%;
     }
 </style>
-<body>
+
 <section class="bg-light py-3 py-md-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -23,18 +20,18 @@
                             <h1>Contact App Manager</h1>
                         </div>
                         <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Please log in to your account</h2>
-                        <form action='dashboard.php' method='POST'>
+                        <form action='login' method='POST'>
                             <div class="row gy-2 overflow-hidden">
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="Username" id="Username" placeholder="Username" required>
-                                        <label for="Username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" name="nama_ser" id="nama_user" placeholder="Username" required>
+                                        <label for="nama_user" class="form-label">Username</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
-                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" required>
+                                        <label for="pass" class="form-label">Password</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -45,7 +42,7 @@
                             </div>
                         </form>
                         <div class="col-12">
-                            <p class="m-0 text-secondary text-center">Don't have any account? <a href="signin.php" class="link-primary text-decoration-none">Sign up</a></p>
+                            <p class="m-0 text-secondary text-center">Don't have any account? <a href="<?= urlpath('signin') ?>" class="link-primary text-decoration-none">Sign in</a></p>
                         </div>
                     </div>
                 </div>
@@ -53,6 +50,3 @@
         </div>
     </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
