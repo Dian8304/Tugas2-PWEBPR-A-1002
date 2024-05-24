@@ -24,14 +24,14 @@
                 <div class="row gy-2 overflow-hidden">
                     <div class="col-12">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="nama_user" id="nama_user" placeholder="Username" required>
                             <label for="nama_user" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="nama_user" id="nama_user" placeholder="Username" required>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" required>
                             <label for="pass" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" required>
                         </div>
                     </div>
                     <div class="col-12">
